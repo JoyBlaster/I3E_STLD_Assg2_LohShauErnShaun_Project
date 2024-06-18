@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 49e918284f37dca4ea29044ad6b38d91
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - openAudio: {fileID: 8300000, guid: 7a91ac488cf75934f966e45c6f3e6fc0, type: 3}
+  - collectibleToSpawn: {fileID: 7283063580912850802, guid: dfb64a9c2b300f340aa610282996de87, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
