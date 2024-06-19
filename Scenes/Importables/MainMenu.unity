@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -442,6 +442,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myMixer: {fileID: 24100000, guid: d9681d398e3084e42a03cd7b28563ce3, type: 2}
+  musicSlider: {fileID: 216429274}
+  sfxSlider: {fileID: 238976971}
+  musicSliderValue: 0
+  sfxSliderValue: 0
 --- !u!114 &129037792
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,36 +13,22 @@ using UnityEngine.UI;
 public class VolumeChanger : MonoBehaviour
 {
     /// <summary>
-    /// Variable to check if a GameManager component is alr running
-    /// </summary>
-    public static VolumeChanger instance;
-
-    /// <summary>
     /// Link the Audio Mixer to the sliders for adjustment
     /// </summary>
     [SerializeField]
     private AudioMixer myMixer;
 
     /// <summary>
-    /// Allows volume changes to save data across scenes
+    /// References sliders
     /// </summary>
-    private void Awake()
-    {
-        // If there is NO VolumeChanger component running yet
-        if (instance == null)
-        {
-            // Carry out this
-            instance = this;
-            // Set game object to DontDestroyOnLoad
-            DontDestroyOnLoad(gameObject);
-        }
-        // If GameManager ALREADY exists
-        else if (instance != null && instance != this)
-        {
-            // Destroy this current newly made game object
-            Destroy(gameObject);
-        }
-    }
+    public Slider musicSlider;
+    public Slider sfxSlider;
+
+    /// <summary>
+    /// References sliders
+    /// </summary>
+    public float musicSliderValue = 0;
+    public float sfxSliderValue = 0;
 
     /// <summary>
     /// Change Music volume based on slider
@@ -51,6 +37,11 @@ public class VolumeChanger : MonoBehaviour
     public void SetMusicVolume(float volume)
     {
         myMixer.SetFloat("Music", volume);
+        if (volume <= -30)
+        {
+            myMixer.SetFloat("Music", -80);
+        }
+        PlayerPrefs.SetFloat("musicVol",volume);
     }
 
     /// <summary>
@@ -60,5 +51,22 @@ public class VolumeChanger : MonoBehaviour
     public void SetSFXVolume(float volume)
     {
         myMixer.SetFloat("SFX", volume);
+        if (volume <= -30)
+        {
+            myMixer.SetFloat("SFX", -80);
+        }
+        PlayerPrefs.SetFloat("sfxVol", volume);
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        musicSliderValue = PlayerPrefs.GetFloat("musicVol");
+        myMixer.SetFloat("Music", musicSliderValue);
+        musicSlider.value = musicSliderValue;
+
+        sfxSliderValue = PlayerPrefs.GetFloat("sfxVol");
+        myMixer.SetFloat("SFX", sfxSliderValue);
+        sfxSlider.value = sfxSliderValue;
     }
 }

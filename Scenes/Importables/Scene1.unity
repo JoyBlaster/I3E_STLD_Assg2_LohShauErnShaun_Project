@@ -384,6 +384,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myMixer: {fileID: 24100000, guid: d9681d398e3084e42a03cd7b28563ce3, type: 2}
+  musicSlider: {fileID: 950077310}
+  sfxSlider: {fileID: 1849198363}
+  musicSliderValue: 0
+  sfxSliderValue: 0
 --- !u!114 &183143734
 MonoBehaviour:
   m_ObjectHideFlags: 0
