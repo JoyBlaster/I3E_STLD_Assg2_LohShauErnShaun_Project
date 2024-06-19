@@ -33,8 +33,10 @@ public class JumpPill : Interactable
         // Start playing audio here (will not be interrupted by GameObject deletion)
         // (Which audio variable to play, location to play audio, volume)
         AudioSource.PlayClipAtPoint(jumpAudio, transform.position, 1f);
+        /*
         // Add jump buff UI
         GameManager.instance.ShowBuff(buffType);
+        */
         // Multiply jump height by float variable
         playerSettings.GetComponent<StarterAssets.FirstPersonController>().JumpHeight *= jumpManipulate;
         // Remove object after interacted with

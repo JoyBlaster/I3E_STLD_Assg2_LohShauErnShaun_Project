@@ -33,8 +33,10 @@ public class SpeedPill : Interactable
         // Start playing audio here (will not be interrupted by GameObject deletion)
         // (Which audio variable to play, location to play audio, volume)
         AudioSource.PlayClipAtPoint(speedAudio, transform.position, 1f);
+        /*
         // Add speed buff UI
         GameManager.instance.ShowBuff(buffType);
+        */
         // Multiply walking and running speed by float variable
         playerSettings.GetComponent<StarterAssets.FirstPersonController>().MoveSpeed *= speedManipulate;
         playerSettings.GetComponent<StarterAssets.FirstPersonController>().SprintSpeed *= speedManipulate;
