@@ -23,7 +23,12 @@ public class GunPickUp : Interactable
     /// </summary>
     public GameObject showGun;
 
-        /// <summary>
+    /// <summary>
+    /// Link object to player aiming reticle
+    /// </summary>
+    public GameObject reticle;
+
+    /// <summary>
     /// Link object to gun model in player hand
     /// </summary>
     public bool pickUp;
@@ -53,6 +58,8 @@ public class GunPickUp : Interactable
     {
         // Set gun in player hand to visible
         showGun.SetActive(true);
+        // Set player reticle to visible
+        reticle.SetActive(true);
         // Save info of gun being picked up
         GameManager.instance.GunPickedUp(true);
         // Destoying obj
@@ -64,14 +71,23 @@ public class GunPickUp : Interactable
     // Start is called before the first frame update
     void Start()
     {
+        // If gun is already picked up
         if (GameManager.instance.gunHeld == true)
         {
+            // Debug log
             Debug.Log("Gun alr picked up");
+            // Show reticle
+            reticle.SetActive(true);
+            // Carry out PickUpGun function
             PickUpGun();
         }
+        // If gun not picked up yet
         else
         {
+            // Debug log
             Debug.Log("Gun not picked up yet");
+            // Hide reticle
+            reticle.SetActive(false);
         }
     }
 

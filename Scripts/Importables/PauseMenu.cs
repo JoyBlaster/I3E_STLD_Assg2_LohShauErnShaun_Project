@@ -14,12 +14,22 @@ public class PauseMenu : MonoBehaviour
     /// <summary>
     /// Set game as paused variable to false
     /// </summary>
-    public static bool GameIsPaused = false;
+    public bool GameIsPaused = false;
+
+    /// <summary>
+    /// Audio for pausing game
+    /// </summary>
+    [SerializeField]
+    private AudioSource pauseAudio;
 
     /// <summary>
     /// Link to pause menu UI object
     /// </summary>
     public GameObject pauseMenuUI;
+    /// <summary>
+    /// Link to reticle UI object
+    /// </summary>
+    public GameObject reticleUI;
 
     /// <summary>
     /// Link to following player camera object
@@ -31,6 +41,7 @@ public class PauseMenu : MonoBehaviour
     {
         // Hide pause menu when starting game
         pauseMenuUI.SetActive(false);
+        Resume();
     }
 
     // Update is called once per frame
@@ -47,6 +58,8 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
+                // Play pause sfx
+                pauseAudio.Play();
                 // Pause the game
                 Pause();
             }
@@ -60,6 +73,8 @@ public class PauseMenu : MonoBehaviour
     {
         // Set pause menu to hidden
         pauseMenuUI.SetActive(false);
+        // Show reticle
+        reticleUI.SetActive(true);
         // Continue flow of time
         Time.timeScale = 1f;
         // Turn off following camera object
@@ -79,6 +94,8 @@ public class PauseMenu : MonoBehaviour
     {
         // Set pause menu to active
         pauseMenuUI.SetActive(true);
+        // Hide reticle
+        reticleUI.SetActive(false);
         // Stop flow of time
         Time.timeScale = 0f;
         // Turn off following camera object
