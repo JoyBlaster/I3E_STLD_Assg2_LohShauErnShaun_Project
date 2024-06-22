@@ -30,11 +30,14 @@ public class PauseMenu : MonoBehaviour
     /// Link to reticle UI object
     /// </summary>
     public GameObject reticleUI;
-
     /// <summary>
     /// Link to following player camera object
     /// </summary>
     public GameObject playerCamera;
+    /// <summary>
+    /// Link to player hp bar UI
+    /// </summary>
+    public PlayerHP hpBar;
 
     // Start is called before the first frame update
     void Start()
@@ -50,8 +53,10 @@ public class PauseMenu : MonoBehaviour
         // When player presses the ESC key
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            // Set variable of whether game is paused or not
+            bool lifeState = hpBar.GameIsOver;
             // Check if game is alr paused
-            if (GameIsPaused)
+            if (GameIsPaused && !lifeState)
             {
                 // Resume the game
                 Resume();

@@ -35,7 +35,11 @@ public class GunShooter : MonoBehaviour
     /// Reference to pause menu UI
     /// </summary>
     public GameObject pauseMenu;
-    
+    /// <summary>
+    /// Link to player hp bar UI
+    /// </summary>
+    public PlayerHP hpBar;
+
     /// <summary>
     /// Audio for picking up gun
     /// </summary>
@@ -61,8 +65,10 @@ public class GunShooter : MonoBehaviour
         {
             // Set variable of whether game is paused or not
             bool pauseState = pauseMenu.GetComponent<PauseMenu>().GameIsPaused;
+            // Set variable of whether game is paused or not
+            bool lifeState = hpBar.GameIsOver;
             // If game is not paused
-            if (!pauseState)
+            if (!pauseState && !lifeState)
             {
                 // Reset cooldown interval between firing
                 nextTimeToFire = Time.time + 1f / fireRate;
