@@ -9,6 +9,8 @@ public class Shootables : MonoBehaviour
     private float health = 50f;
     public Slider healthBar;
 
+    public GameObject enemyObj;
+
     /// <summary>
     /// Audio for damaging enemy
     /// </summary>
@@ -23,6 +25,7 @@ public class Shootables : MonoBehaviour
     public void TakeDamage(float dmg)
     {
         health -= dmg;
+        Debug.Log(health);
         // Start playing audio here
         hitAudio.Play();
         if (health <= 0)
@@ -34,7 +37,7 @@ public class Shootables : MonoBehaviour
     void Death()
     {
         killAudio.Play();
-        Destroy(gameObject);
+        Destroy(enemyObj);
     }
 
     // Start is called before the first frame update

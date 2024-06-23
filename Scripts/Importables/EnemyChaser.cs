@@ -5,24 +5,29 @@ using UnityEngine.AI;
 
 public class EnemyChaser : MonoBehaviour
 {
+    /// <summary>
+    /// Reference AI pathfinding
+    /// </summary>
     public NavMeshAgent enemyChase;
-    public GameObject player;
+
+    /// <summary>
+    /// Reference player hp UI script
+    /// </summary>
     public PlayerHP hpScript;
+
+    /// <summary>
+    /// Reference player object
+    /// </summary>
+    public GameObject player;
+    /// <summary>
+    /// Reference enemy object
+    /// </summary>
     public GameObject enemy;
 
-    private bool detected = false;
-
-    void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            detected = true;
-        }
-        else
-        {
-            Debug.Log("Player not detected");
-        }
-    }
+    /// <summary>
+    /// References Enemy Detection component
+    /// </summary>
+    public EnemyDetection detectionStatus;
 
     /// <summary>
     /// While in contact with enemy objects
@@ -41,20 +46,25 @@ public class EnemyChaser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        bool detected = detectionStatus.detected;
+        // Debug log whether player has been detected
         Debug.Log(detected);
+        // If player has been detected
         if (detected == true)
         {
-            gameObject.GetComponent<SphereCollider>().enabled = false;
+            // Set enemy to start chasing player
             enemyChase.SetDestination(player.transform.position);
         }
+        // If player not detected
         else
         {
+            // Don't move
             enemyChase.SetDestination(enemy.transform.position);
         }
     }

@@ -111,7 +111,7 @@ public class GunShooter : MonoBehaviour
             }
             // Create bullet impact on the hit spot
             GameObject impactGO = Instantiate(impactFlash, hit.point, Quaternion.LookRotation(hit.normal));
-            // Remove the bullet impact effect after 2 seconds (reduces assets laoded)
+            // Remove the bullet impact effect after 2 seconds (reduces assets loaded)
             Destroy(impactGO, 2f);
         }
     }
