@@ -101,6 +101,10 @@ public class GunShooter : MonoBehaviour
         {
             // Send object name to debug log
             Debug.Log(hit.transform.name);
+            // Create bullet impact on the hit spot
+            GameObject impactGO = Instantiate(impactFlash, hit.point, Quaternion.LookRotation(hit.normal));
+            // Remove the bullet impact effect after 2 seconds (reduces assets loaded)
+            Destroy(impactGO, 2f);
             // Set target as either an object with "Shootables" component or null
             Shootables target = hit.transform.GetComponent<Shootables>();
             // If target has component "Shootables"
@@ -109,10 +113,14 @@ public class GunShooter : MonoBehaviour
                 // Do dmg to target object
                 target.TakeDamage(damage);
             }
-            // Create bullet impact on the hit spot
-            GameObject impactGO = Instantiate(impactFlash, hit.point, Quaternion.LookRotation(hit.normal));
-            // Remove the bullet impact effect after 2 seconds (reduces assets loaded)
-            Destroy(impactGO, 2f);
+            // Set target as either an object with "Shootables" component or null
+            BossShootables bTarget = hit.transform.GetComponent<BossShootables>();
+            // If target has component "BossShootables"
+            if (bTarget != null)
+            {
+                // Do dmg to target object
+                bTarget.TakeDamage(damage);
+            }
         }
     }
 }

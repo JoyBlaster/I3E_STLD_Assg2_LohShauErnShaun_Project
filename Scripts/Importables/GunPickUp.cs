@@ -22,6 +22,10 @@ public class GunPickUp : Interactable
     /// Link object to gun model in player hand
     /// </summary>
     public GameObject showGun;
+    /// <summary>
+    /// Link object to gun model in scene
+    /// </summary>
+    public GameObject sceneGun;
 
     /// <summary>
     /// Link object to player aiming reticle

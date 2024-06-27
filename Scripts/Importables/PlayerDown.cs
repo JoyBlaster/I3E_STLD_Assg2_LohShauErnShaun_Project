@@ -18,20 +18,12 @@ public class PlayerDown : MonoBehaviour
     public GameObject playerCamera;
 
     /// <summary>
-    /// Audio for pausing game
-    /// </summary>
-    [SerializeField]
-    private AudioSource koAudio;
-
-    /// <summary>
     /// Link to player hp bar UI
     /// </summary>
     public PlayerHP hpBar;
 
     public void GameOver()
     {
-        // Play the game over sfx
-        koAudio.Play();
         // Show the game over screen
         goScreen.SetActive(true);
         // Hide reticle
