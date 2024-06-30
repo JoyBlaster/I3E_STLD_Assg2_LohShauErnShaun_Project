@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     /// Variable to handle picking up the gun
     /// </summary>
     /// <param name="pickUp"> Boolean for picking up weapon </param>
-    public void GunPickedUp(bool pickUp) 
+    public void GunPickedUp(bool pickUp)
     {
         // When picked up variable is true
         if (pickUp)

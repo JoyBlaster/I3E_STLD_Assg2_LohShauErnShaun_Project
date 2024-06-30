@@ -12825,7 +12825,7 @@ PrefabInstance:
     - target: {fileID: 6104722171563552822, guid: afb5a58c326daf74dbd23f2a131f33da,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.39
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 6104722171563552822, guid: afb5a58c326daf74dbd23f2a131f33da,
         type: 3}
@@ -12835,27 +12835,27 @@ PrefabInstance:
     - target: {fileID: 6104722171563552822, guid: afb5a58c326daf74dbd23f2a131f33da,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.590337
       objectReference: {fileID: 0}
     - target: {fileID: 6104722171563552822, guid: afb5a58c326daf74dbd23f2a131f33da,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 7.85046e-18
+      value: 0.38923287
       objectReference: {fileID: 0}
     - target: {fileID: 6104722171563552822, guid: afb5a58c326daf74dbd23f2a131f33da,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 7.850461e-18
+      value: 0.38923287
       objectReference: {fileID: 0}
     - target: {fileID: 6104722171563552822, guid: afb5a58c326daf74dbd23f2a131f33da,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.70710677
+      value: -0.590337
       objectReference: {fileID: 0}
     - target: {fileID: 6104722171563552822, guid: afb5a58c326daf74dbd23f2a131f33da,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 66.797
       objectReference: {fileID: 0}
     - target: {fileID: 6104722171563552822, guid: afb5a58c326daf74dbd23f2a131f33da,
         type: 3}
@@ -26766,7 +26766,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1809743329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8fcb801cbad31c4b8de71c301ed5316, type: 3}
+  m_Script: {fileID: 11500000, guid: 49224596907b56647862ddfa69e74614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gunHeld: 0
