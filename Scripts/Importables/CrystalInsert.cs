@@ -1,30 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class PowerCore : Collectible
+public class CrystalInsert : Collectible
 {
     /// <summary>
     /// Reference the transition animation
     /// </summary>
     public Animator transition;
 
-    // When object is interacted
+    /// <summary>
+    /// Reference to crystal cores
+    /// </summary>
+    public GameObject crystalCores;
+
+    /// <summary>
+    /// When BuffTaken is done
+    /// </summary>
     public override void BuffTaken()
     {
-        // Carry out load next function
-        LoadNext();
+        // Carry out InsertCrystals function
+        InsertCrystals();
     }
 
     /// <summary>
-    /// Function to play animation and load scene
+    /// When crystalas are inserted
     /// </summary>
-    public void LoadNext()
+    void InsertCrystals()
     {
+        // Show the power cores
+        crystalCores.SetActive(true);
+        // Load animation
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+    /// <summary>
+    /// Load scene
+    /// </summary>
+    /// <param name="levelIndex"> current scene index </param>
+    /// <returns></returns>
     IEnumerator LoadLevel(int levelIndex)
     {
         // Start animation
@@ -38,12 +52,7 @@ public class PowerCore : Collectible
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Hide the power cores
+        crystalCores.SetActive(false);
     }
 }

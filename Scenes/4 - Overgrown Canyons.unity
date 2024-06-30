@@ -24579,6 +24579,13 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 212281235}
+    - target: {fileID: 5487751234601973806, guid: afb5a58c326daf74dbd23f2a131f33da,
+        type: 3}
+      propertyPath: m_text
+      value: 'Level 2:
+
+        Overgrown Canyons'
+      objectReference: {fileID: 0}
     - target: {fileID: 6104722171563552822, guid: afb5a58c326daf74dbd23f2a131f33da,
         type: 3}
       propertyPath: m_LocalPosition.x
