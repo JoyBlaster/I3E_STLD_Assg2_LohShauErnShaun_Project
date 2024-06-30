@@ -79,7 +79,7 @@ public class OgreManBehaviour : MonoBehaviour
     /// <summary>
     /// References Enemy Detection component
     /// </summary>
-    public EnemyDetection detectionStatus;
+    public BossDetect detectionStatus;
     /// <summary>
     /// Variable to determine enemy contact dps
     /// </summary>

@@ -65,9 +65,9 @@ public class SpeedUpgrade : Collectible
                 // Add speed buff UI
                 BuffManager.instance.ShowBuff(buffType);
                 // Add to current health by float variable
-                playerSettings.GetComponent<StarterAssets.FirstPersonController>().MoveSpeed += walkManipulate;
+                playerSettings.GetComponent<StarterAssets.FirstPersonController>().MoveSpeed = 4f + walkManipulate;
                 // Add to maximum health by float variable
-                playerSettings.GetComponent<StarterAssets.FirstPersonController>().SprintSpeed += runManipulate;
+                playerSettings.GetComponent<StarterAssets.FirstPersonController>().SprintSpeed = 6f + runManipulate;
                 // Lower number of times that player can buff
                 canBuff -= 1;
             }

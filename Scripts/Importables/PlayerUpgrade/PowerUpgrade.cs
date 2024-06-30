@@ -63,7 +63,7 @@ public class PowerUpgrade : Collectible
                 // Add power buff UI
                 BuffManager.instance.ShowBuff(buffType);
                 // Add to damage by float variable
-                gunPower.GetComponent<GunShooter>().damage += powerManipulate;
+                gunPower.GetComponent<GunShooter>().damage = 10f + powerManipulate;
                 // Lower number of times that player can buff
                 canBuff -= 1;
             }

@@ -85,8 +85,8 @@ public class HealthUpgrade : Collectible
         // Amount to increase hp by
         float buffStart = healthManipulate * count;
         // Set damage to current buff lvl
-        maxHealth.GetComponent<PlayerHP>().health += buffStart;
-        maxHealth.GetComponent<PlayerHP>().healthMax += buffStart;
+        maxHealth.GetComponent<PlayerHP>().health = 100f + buffStart;
+        maxHealth.GetComponent<PlayerHP>().healthMax = 100f + buffStart;
     }
 
     // Update is called once per frame
