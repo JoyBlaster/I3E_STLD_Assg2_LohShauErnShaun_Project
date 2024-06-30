@@ -29,7 +29,7 @@ public class PowerCore : Collectible
     {
         // Start animation
         transition.SetTrigger("End");
-        // Wait for 2 seconds
+        // Wait for 1 seconds
         yield return new WaitForSeconds(1f);
         // Load new scene
         SceneManager.LoadScene(levelIndex);

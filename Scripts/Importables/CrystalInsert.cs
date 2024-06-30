@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CrystalInsert : Collectible
 {
@@ -8,6 +9,11 @@ public class CrystalInsert : Collectible
     /// Reference the transition animation
     /// </summary>
     public Animator transition;
+
+    /// <summary>
+    /// Audio for placing crystals
+    /// </summary>
+    public AudioSource yippee;
 
     /// <summary>
     /// Reference to crystal cores
@@ -30,6 +36,8 @@ public class CrystalInsert : Collectible
     {
         // Show the power cores
         crystalCores.SetActive(true);
+        // Play yippee sfx
+        yippee.Play();
         // Load animation
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }

@@ -151,7 +151,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5614710533523531107, guid: d9681d398e3084e42a03cd7b28563ce3,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: ef54fe6f0f689454f92bd53d6addf330, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6d3732f6e18e3374ba6633487c08612e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3537,7 +3537,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -134, y: 341}
+  m_AnchoredPosition: {x: -134, y: 353}
   m_SizeDelta: {x: 60, y: -70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1365779728
@@ -4929,7 +4929,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 140}
+  m_AnchoredPosition: {x: 0, y: 131}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1595364095
@@ -4960,7 +4960,12 @@ MonoBehaviour:
     SFX sources:
 
     Various
-    Online Sources'
+    Online Sources
+
+
+    Music sources:
+
+    AZALI, Nintendo, Jonny Easton'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

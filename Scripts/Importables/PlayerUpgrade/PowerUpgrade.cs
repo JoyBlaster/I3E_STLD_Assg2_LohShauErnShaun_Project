@@ -63,7 +63,7 @@ public class PowerUpgrade : Collectible
                 // Add power buff UI
                 BuffManager.instance.ShowBuff(buffType);
                 // Add to damage by float variable
-                gunPower.GetComponent<GunShooter>().damage = 10f + powerManipulate;
+                gunPower.GetComponent<GunShooter>().damage += powerManipulate;
                 // Lower number of times that player can buff
                 canBuff -= 1;
             }
@@ -85,7 +85,7 @@ public class PowerUpgrade : Collectible
         // Amount to increase dmg by
         float buffStart = powerManipulate * count;
         // Set damage to current buff lvl
-        gunPower.GetComponent<GunShooter>().damage += buffStart;
+        gunPower.GetComponent<GunShooter>().damage = 10f + buffStart;
     }
 
     // Update is called once per frame
